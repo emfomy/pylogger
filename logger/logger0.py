@@ -29,7 +29,7 @@ level_styles = {
     'info': { 'color': 'cyan', },
     'notice': { 'color': 'cyan', 'bold': True, },
     'warning': { 'color': 'yellow', 'faint': True, },
-    'io': { 'color': 172, 'faint': True, },
+    'io': { 'color': 172, },
     'success': { 'color': 'green', 'bold': True, },
     'error': { 'color': 'red', 'bold': True, },
     'critical': { 'background': 'red', 'bold': True, },

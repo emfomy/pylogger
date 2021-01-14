@@ -21,22 +21,22 @@ class Logger:
     fmt = '%(asctime)s %(name)24.24s:%(lineno)-4d %(levelname)8s %(message)s'
 
     field_styles = {
-        'asctime': {'color': 'green', 'faint': True},
-        'name': {'color': 'cyan', 'faint': True},
-        'levelname': {'color': 'black', 'bold': True},
+        'asctime': { 'color': 'green', 'faint': True, },
+        'name': { 'color': 'cyan', 'faint': True, },
+        'levelname': { 'color': 'black', 'bold': True, },
     }
 
     level_styles = {
-        'spam': {'color': 'magenta', 'faint': True},
-        'debug': {'color': 'blue'},
-        'verbose': {'color': 'magenta'},
-        'info': {'color': 'cyan'},
-        'notice': {'color': 'cyan', 'bold': True},
-        'warning': {'color': 'yellow', 'bold': True},
-        'io': { 'color': 172, 'faint': True, },
-        'success': {'color': 'green', 'bold': True},
-        'error': {'color': 'red', 'bold': True},
-        'critical': {'background': 'red', 'bold': True},
+        'spam': { 'color': 'magenta', 'faint': True, },
+        'debug': { 'color': 'blue', },
+        'verbose': { 'color': 'magenta', },
+        'info': { 'color': 'cyan', },
+        'notice': { 'color': 'cyan', 'bold': True, },
+        'warning': { 'color': 'yellow', 'bold': True, },
+        'io': { 'color': 172, , },
+        'success': { 'color': 'green', 'bold': True, },
+        'error': { 'color': 'red', 'bold': True, },
+        'critical': { 'background': 'red', 'bold': True, },
     }
 
     @classmethod
