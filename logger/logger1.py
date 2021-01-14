@@ -2,6 +2,7 @@
 # -*- coding:utf-8 -*-
 
 __author__ = 'Mu Yang <http://muyang.pro>'
+__copyright__ = 'Copyright 2020'
 
 __all__ = [
     'install_logger',
@@ -47,7 +48,7 @@ class Logger:
         setattr(verboselogs.VerboseLogger, 'flink', lambda self, src, dst, *args, **kw: self._log(32, src+' <- '+dst, args, **kw))
 
         verboselogs.install()
-        coloredlogs.install(level=5, fmt=cls.fmt, level_styles=cls.level_styles, field_styles=cls.field_styles)
+        coloredlogs.install(level=5, fmt=cls.fmt, field_styles=cls.field_styles, level_styles=cls.level_styles)
         builtins.logger = cls.logger
         builtins.exceptstr = cls.exceptstr
 
