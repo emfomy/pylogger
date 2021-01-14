@@ -32,6 +32,7 @@ class Logger:
         'info': {'color': 'cyan'},
         'notice': {'color': 'cyan', 'bold': True},
         'warning': {'color': 'yellow', 'bold': True},
+        'io': { 'color': 172, 'faint': True, },
         'success': {'color': 'green', 'bold': True},
         'error': {'color': 'red', 'bold': True},
         'critical': {'background': 'red', 'bold': True},
@@ -39,6 +40,12 @@ class Logger:
 
     @classmethod
     def install_logger(cls):
+        verboselogs.add_log_level(32, 'IO')
+        setattr(verboselogs.VerboseLogger, 'fin',   lambda self, name, *args, **kw: self._log(32, '<< '+name, args, **kw))
+        setattr(verboselogs.VerboseLogger, 'fout',  lambda self, name, *args, **kw: self._log(32, '>> '+name, args, **kw))
+        setattr(verboselogs.VerboseLogger, 'fcp',   lambda self, src, dst, *args, **kw: self._log(32, src+' => '+dst, args, **kw))
+        setattr(verboselogs.VerboseLogger, 'flink', lambda self, src, dst, *args, **kw: self._log(32, src+' <- '+dst, args, **kw))
+
         verboselogs.install()
         coloredlogs.install(level=5, fmt=cls.fmt, level_styles=cls.level_styles, field_styles=cls.field_styles)
         builtins.logger = cls.logger
