@@ -3,7 +3,10 @@
 
 __author__ = 'Mu Yang <http://muyang.pro>'
 
-__all__ = [ 'install_logger', 'demonstrate_logger' ]
+__all__ = [
+    'install_logger',
+    'demonstrate_logger',
+]
 
 import builtins
 import inspect
